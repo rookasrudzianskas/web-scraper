@@ -1,27 +1,34 @@
-# Next.js + Tailwind CSS Example
+# Amazon Web Scraper Application
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a web scraping application built using Next.js framework that allows users to extract data from Amazon.com.
 
-## Deploy your own
+## Features
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- Ability to search for products on Amazon.com using keywords.
+- Displays search results with details including product name, image, price, rating, and number of reviews.
+- Allows users to sort search results by price, rating, or number of reviews.
+- Enables users to export search results in CSV format for easy analysis.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Installation
 
-## How to use
+To use this application, follow these steps:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+1. Clone the repository to your local machine.
+2. Run `npm install` to install the required dependencies.
+3. Run `npm run dev` to start the application.
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+Note: This application requires Node.js and npm to be installed on your machine.
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Usage
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+Once the application is running, navigate to `http://localhost:3000` in your web browser. Enter a keyword in the search bar and click the search button. The application will display a list of search results. You can sort the results by price, rating, or number of reviews using the dropdown menu.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+To export the search results, click the "Export CSV" button. The CSV file will be downloaded to your computer.
+
+## Contributing
+
+Contributions to this application are welcome. To contribute, please fork the repository and submit a pull request with your changes.
+
+## License
+
+This application is licensed under the MIT license. See LICENSE.md for more information.

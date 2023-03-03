@@ -33,9 +33,6 @@ const Header = ({}) => {
     } catch (e) {
       console.error(e);
     }
-
-    // Wait for the scraper to finish and then redirect to the results page
-
   }
 
   return (
