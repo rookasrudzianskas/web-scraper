@@ -37,7 +37,7 @@ export default async function handler(
       search,
       start_eta,
       status: 'pending',
-      createdAt: admin.firestore.Timestamp.now(),
+      createdAt: start_eta,
     })
 
     res.status(200).json({
