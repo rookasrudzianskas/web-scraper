@@ -2,9 +2,12 @@ import React from 'react';
 
 const Header = ({}) => {
   return (
-    <div>
-      
-    </div>
+    <header>
+      <form>
+        <input type="text" placeholder="Search for a product on Amazon" />
+        <button type="submit">Search</button>
+      </form>
+    </header>
   );
 };
 
