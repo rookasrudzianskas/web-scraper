@@ -16,7 +16,7 @@ const Header = ({}) => {
     try {
       // Call the api to activate the scraper
       // api/activateScraper
-      const response = await fetch('/activateScraper', {
+      const response = await fetch('/api/activateScraper', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
