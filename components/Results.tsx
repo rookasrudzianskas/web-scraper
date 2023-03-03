@@ -7,7 +7,7 @@ type Props = {
 
 const Results = ({results}: Props) => {
   return (
-    <div className="grid lg:grid-cols-2 xl:grid-cols-5 gap-5 w-full">
+    <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full">
       {results.map((result) => (
         <Link href={result.url} key={result.title} className="flex flex-col space-x-4 bg-white rounded-lg shadow-md p-5">
           <img srcSet={result.imageset} alt={result.title} className="object-contain w-full h-40 py-5" />
@@ -30,7 +30,7 @@ const Results = ({results}: Props) => {
                 </p>
               )}
             </div>
-            <div>
+            <div className="flex flex-wrap gap-2 justify-end mt-5">
               {result.features.map((feature) => (
                 feature && (
                   <p key={feature} className="text-xs bg-indigo-500 px-2 py-1 text-white rounded-md">
