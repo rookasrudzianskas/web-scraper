@@ -15,9 +15,13 @@ const Header = ({}) => {
 
     try {
       // Call the api to activate the scraper
+      // api/activateScraper
     } catch (e) {
       console.error(e);
     }
+
+    // Wait for the scraper to finish and then redirect to the results page
+
   }
 
   return (
