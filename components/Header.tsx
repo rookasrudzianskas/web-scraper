@@ -2,6 +2,7 @@
 import React, {useRef} from 'react';
 import {MagnifyingGlassIcon} from "@heroicons/react/20/solid";
 import {useRouter} from "next/navigation";
+import toast from "react-hot-toast";
 
 const Header = ({}) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -9,6 +10,7 @@ const Header = ({}) => {
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const input = inputRef.current?.value;
+    const notification = toast.loading(`Starting a Scrapper for: ${input}`)
     if (!input) return;
 
     if (inputRef.current?.value) {
@@ -29,8 +31,14 @@ const Header = ({}) => {
       })
 
       const { collection_id, start_eta } = await response.json();
+      toast.success(`Scrapper started for: ${input}`, {
+        id: notification
+      })
       router.push(`/search/${collection_id}`);
     } catch (e) {
+      toast.error('Whoops, something went wrong! Please try again later.', {
+        id: notification
+      })
       console.error(e);
     }
   }
