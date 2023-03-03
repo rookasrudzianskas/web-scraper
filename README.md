@@ -2,6 +2,9 @@
 
 This is a web scraping application built using Next.js framework that allows users to extract data from Amazon.com.
 
+The live application is available [Amazon Web Scraper](https://roookas-web-scraper.vercel.app/)
+With love from [Rokas Rudzianskas](https://byrookas.com) with ❤️
+
 ## Features
 
 - Ability to search for products on Amazon.com using keywords.
