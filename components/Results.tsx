@@ -30,6 +30,15 @@ const Results = ({results}: Props) => {
                 </p>
               )}
             </div>
+            <div>
+              {result.features.map((feature) => (
+                feature && (
+                  <p key={feature} className="text-xs bg-indigo-500 px-2 py-1 text-white rounded-md">
+                    {feature}
+                  </p>
+                )
+              ))}
+            </div>
           </div>
         </Link>
       ))}
