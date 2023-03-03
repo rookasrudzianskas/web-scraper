@@ -4,18 +4,27 @@ import {MagnifyingGlassIcon} from "@heroicons/react/20/solid";
 
 const Header = ({}) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const input = inputRef.current?.value;
-    if(!input) return;
+    if (!input) return;
 
-    if(inputRef.current?.value) {
+    if (inputRef.current?.value) {
       inputRef.current.value = '';
     }
 
     try {
       // Call the api to activate the scraper
       // api/activateScraper
+      const response = await fetch('/activateScraper', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          search: input,
+        })
+      })
     } catch (e) {
       console.error(e);
     }

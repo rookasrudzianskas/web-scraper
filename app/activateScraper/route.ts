@@ -1,12 +1,5 @@
-export async function POST(req: Request) {
-  const search = req.body?.search;
-}
+import {NextApiRequest} from "next";
 
-export async function GET(req: Request) {
-
-
-
-  return new Response('Hello Rokas', {
-    status: 200,
-  });
+export async function POST(req: NextApiRequest) {
+  const search = req.body.search;
 }
